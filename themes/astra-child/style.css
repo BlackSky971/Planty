@@ -194,7 +194,7 @@ header #commander {
 
 
 /* Pour positionner les images en dehors du flux */
-/*       tout en restant dans leur contenair     */
+/*       tout en restant dans leur conteneur     */
 .relative {
     position: relative;
   }
