@@ -1,0 +1,735 @@
+/*
+Theme Name: Astra Child
+Theme URI: https://wpastra.com/
+Template: astra
+Author: Brainstorm Force
+Author URI: https://wpastra.com/about/?utm_source=theme_preview&utm_medium=author_link&utm_campaign=astra_theme
+Description: Astra is fast, fully customizable &amp; beautiful WordPress theme suitable for blog, personal portfolio, business website and WooCommerce storefront. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with Schema.org code integrated and is Native AMP ready so search engines will love your site. It offers special features and templates so it works perfectly with all page builders like Elementor, Beaver Builder, Visual Composer, SiteOrigin, Divi, etc. Some of the other features: # WooCommerce Ready # Responsive # RTL &amp; Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained &amp; Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and WooCommerce ready theme that you can use for building any kind of website!
+Tags: custom-menu,custom-logo,entertainment,one-column,two-columns,left-sidebar,e-commerce,right-sidebar,custom-colors,editor-style,featured-images,full-width-template,microformats,post-formats,rtl-language-support,theme-options,threaded-comments,translation-ready,blog
+Version: 4.6.16.1717007740
+Updated: 2024-05-29 18:35:40
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+/* Global Variables */
+
+* :root {
+    --background_primary: #ECE2DA;
+    --background_secondary: #3B8E46;
+    --background-white: #FFFFFF;
+
+    --primary-color: #3B8E46;
+    --secondary-color: #D2776A;
+    --white-text: #FFFFFF;
+    --black-text: #000000;
+    
+    --button-nav: #DC9F96;
+    --button-nav-hover: #C02E44;
+    --button-page: #E0B9B4; 
+    --button-page-hover: #C02E44;
+    --button-text: #FFFFFF;
+}
+
+* body {
+    font-family: 'Syne', sans-serif;
+}
+
+* Suppression du padding qui est mis par défaut sur les balises ARTICLE */
+/*   Pour avoir le site en plein écran (sans bordures blanches autour)   */
+.site-main > article {
+  padding-top: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+content .ast-container {
+    padding: 0;
+  }
+  
+  #content .ast-container #primary {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .wp-block-uagb-image figure img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+/* Nav Menu Mobile */
+.ast-mobile-popup-drawer .ast-mobile-popup-inner {
+    background-color: white;
+    color:black;
+}
+
+.ast-builder-menu-mobile .main-navigation .main-header-menu .menu-item > .menu-link {
+    color: black;
+    background:white;
+}
+
+.ast-builder-menu-mobile .main-navigation .main-header-menu .menu-item > .menu-link:hover {
+    color: black;
+    background: white;
+}
+
+/* Ceci supprime les flèches de défilement sur les champs de formulaire */
+.panier input::-webkit-outer-spin-button,
+.panier input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Header */
+
+/* Suppression du padding qui est mis par défaut sur le header que l'on utilise */
+.site-primary-header-wrap {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  /* Surcharge du bouton Admin */
+  .menu-admin {
+    padding-right: 60px;
+  }
+
+
+header #commander {
+	background-color: var(--button-nav);
+}
+
+#menu-item-47 a:hover {
+    font-weight:bolder;
+    font-size: 14px;
+    line-height:14px;
+}
+
+#masthead .ast-container, .site-header-focus-item + .ast-breadcrumbs-wrapper {
+	padding-right: 0;
+}
+
+.page-commander-lien {
+	background-color: var(--button-page);
+	height:100%;
+	width: 236px;
+	text-align: center;
+    margin-right: 0;
+}
+
+
+/* CSS pour rendre le menu horizontal */
+.menu-content {
+    list-style: none;
+    padding: 0;
+    text-align: right; /* Aligner le contenu du menu à droite */
+    justify-content: flex-end; /* Facultatif: Aligner le menu à droite */
+}
+
+.menu-content li {
+    display: inline-block; /* Afficher les éléments en ligne */
+    margin-right: 20px; /* Espacement entre les éléments du menu */
+}
+
+.menu-content li:last-child {
+    margin-right: 0; /* Aucun espacement à droite pour le dernier élément */
+}
+
+/* Facultatif : Aligner le menu à droite */
+.menu-content {
+    justify-content: flex-end;
+}
+
+.menu-content li:last-child {
+    margin-right: 0; /* Aucun espacement à droite pour le dernier élément */
+}
+
+/* Surcharge au passage de la souri sur les liens du Header */
+.main-header-menu a {
+    font-size: 16px;	
+    font-weight: 400;
+    line-height: 19px;  
+  }
+  
+  .main-header-menu a:hover  {
+    font-size: 13px;	
+    font-weight: 700;
+    line-height: 15px;
+    color: #000000;
+  }
+
+/* Surcharge d'un style "bouton" sur le lien commande */
+.main-header-menu > li:last-child {
+    background-color: #e0b9b4;
+    transition: 0.45s ease;
+    width: 236px;
+    height: 80px;
+  }
+
+  .main-header-menu > li:last-child a {
+    font-size: 16px;	
+    font-weight: 700;
+    line-height: 19px; 
+  }
+  
+  .main-header-menu > li:last-child a:hover {
+    background-color: #c02e44 !important;
+    font-size: 16px;	
+    font-weight: 700;
+    line-height: 19px; 
+  }
+  
+  .main-header-menu li:last-child a {
+    color: #ffffff !important;
+    background-color: #e0b9b4 !important;
+  }
+  
+
+
+
+/* Page Nous Rencontrer */
+
+
+
+/* Pour positionner les images en dehors du flux */
+/*       tout en restant dans leur contenair     */
+.relative {
+    position: relative;
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  
+  .picture1-contact {
+    top: 0px;
+    left: 100px;
+  }
+  
+  .picture2-contact {
+    bottom: 0px;
+    right: 40px;
+  }
+  
+  .picture3-contact {
+    bottom: 100px;
+    left: -65px;
+  }
+  
+  /* Formulaire de contact */ 
+  #fluentform_1 label {
+    font-size: 20px;
+    font-weight: 400 !important;
+    line-height: 22px !important;
+  }
+  
+  #fluentform_1 .ff-el-form-control {
+      border: 0 !important;
+  }
+  
+  #fluentform_1 .bnt-envoyer {
+    /* padding: 20px 70px 20px 70px; */
+    width: 198px;
+    height: 55px;
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+
+/* Page Commander */
+
+/*   Zone des images  */
+
+/*   Utilisé pour Wrappé les ensembles saisie de quantité   */
+/* et garder ces élements centré sur la page après la Wrap  */
+/*                                                          */
+/*          Class ajoutée sur l'élément de la page          */
+.wrap {
+    flex-wrap: wrap !important;
+  }
+  
+  .center {
+    justify-content: center;
+    margin: auto;
+  }
+  
+  .text-img {
+      top: 50%;
+      left: 50%;
+      width: 180px;
+      transform: translate(-50%, -50%);
+      
+  }
+  
+/*   Formulaires de commande  */
+/*   Partie commune au 2 parties du formulaire   */
+
+#fluentform_6 h2,
+#fluentform_6 h3 {
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0;
+}
+
+#fluentform_6 label {
+  margin: 5px 0 5px 0 !important;
+  color: #ffffff;
+}
+
+/*   Partie QUANTITES   */
+#fluentform_6 .ff_columns_total_4 {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #FFFFFF;
+  margin-bottom: 50px;
+}
+
+#fluentform_6 .ff_columns_total_4 .ff-t-column-1,
+#fluentform_6 .ff_columns_total_4 .ff-t-column-2,
+#fluentform_6 .ff_columns_total_4 .ff-t-column-3,
+#fluentform_6 .ff_columns_total_4 .ff-t-column-4 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 2.4px;
+  text-align: center;
+  justify-content: center;
+  width: 193px;   
+}
+
+
+#fluentform_6 .ff_columns_total_4 input[type='number'] {
+  width: 82px;
+  height: 56px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  padding-right: 5px;
+  font-family: 'Inter', 'Times New Roman', Times, serif;
+  text-align: center;
+  border-radius: 7px;
+  z-index: 1;   
+}
+
+#fluentform_6 .container-qt {
+  margin: 0;  
+}
+#fluentform_6 .container-ok {
+  max-width: 100px !important;
+  width: 50%;
+  height: 56px;
+}
+
+/* On donne un style de bouton au + et - qui est rajouté sur l'imput numérique */
+#fluentform_6 .btn-quantity {
+    width: 31px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    background-color: #e0b9b4;
+    color: #ffffff;  
+    left: 55px;
+    padding: 0;
+  }
+  
+  #fluentform_6 .btn-quantity:hover {
+    background-color: #c02e44;
+  }
+  
+  #fluentform_6 .btn-more {
+    position: absolute;
+    border: 0;
+    border-bottom: solid 2px #ffffff;
+    border-left: solid 1px #ffffff;
+    border-radius: 0 7px 0 0;
+    top: 0;
+    z-index: 5;
+  }
+  
+  #fluentform_6 .btn-less {
+    position: absolute;
+    border: 0;
+    border-top: solid 2px #ffffff;
+    border-left: solid 1px #ffffff;
+    border-radius: 0 0 7px 0;
+    bottom: 0;
+    z-index: 5;
+  }
+  
+  /* On donne un style différent des autres boutons du site */
+  #fluentform_6 .btn-ok {
+    padding: 15px 20px 15px 20px !important;
+    max-width: 100px;
+    width: 100%;
+    height: 56px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin: 0;  
+  }
+  
+  /*    Partie INFORMATIONS   */
+#fluentform_6 .ff_columns_total_2 label {
+    margin: 5px 0 5px 0 !important;
+    color: #ffffff;
+  }
+  
+  #fluentform_6 .ff_columns_total_2 input[type='text'],
+  #fluentform_6 .ff_columns_total_2 input[type='email'] {
+    height: 70px;
+    border-radius: 7px;
+    margin: 0;
+  }
+  
+  #fluentform_6 .ff_columns_total_2 .ff-t-column-1 {
+    border-right: 1px solid #ffffff;
+  }
+  
+  #fluentform_6 .ff_columns_total_2 .ff-t-column-2 {
+    padding-left: 30px;
+  }
+  
+  #fluentform_6 .input-order {
+    width: 390px;
+  }
+  
+  #fluentform_6 .bnt-commande {
+    /* padding: 20px 70px 20px 70px; */
+    width: 198px;
+    height: 55px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+  
+.container {
+    max-width: 100%;
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    background-color: #3B8E46;
+    align-items: center;
+    }
+
+
+.section-panier {
+    display:flex;
+    flex-direction:row;
+    column-gap: 30px;
+    width: 100%;
+    height: 140px;
+    margin: 10px 0;
+    padding: 10px 0;
+    justify-content:space-around;
+    border-bottom: 1px solid white;
+    background: #3B8E46; /* Ajout de la couleur de fond verte */
+    
+}
+
+.section-panier .panier {
+    width: 60px;
+    margin: auto;
+    padding: 20px 0;
+    height: 100%;
+}
+
+.panier input {
+    height: 80px;
+    text-align: center;
+}
+
+.panier input[value] {
+    font-size: 25px;
+    line-height: 2.5em;
+}
+
+.section-command .form-info input,
+.section-command .form-livraison input {
+    height: 75px;
+    width: 98%;
+    font-size: 20px;
+    line-height: 1.5em;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+.section-command {
+    display:flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height: auto;
+}
+
+.section-command p {
+    margin: 0;
+    padding: 0;
+}
+
+.form-info, .form-livraison {
+    display:flex;
+    flex-direction:column;
+    align-self: center; 
+    width: 430px;
+}
+
+.form-divider {
+    border-right: 1px solid white;
+    height: 98%;
+}
+
+.form-info {
+    padding-right: 50px;
+    width: 49%;
+    border-right: 1px solid white;
+}
+
+.form-livraison {
+    padding-left: 50px;
+    width: 50%;
+    margin-right: 0;
+}
+
+.form-info h3, .form-livraison h3 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    line-height: 1.5em;
+    color: white;
+    margin:0;
+    padding-bottom: 5px;  
+}
+
+.form-livraison label,
+.form-info label {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    line-height: 2;
+    margin: 10px 0;
+}
+
+.conteneur-bouton-command {
+    display:flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 45px;
+} 
+
+.conteneur-bouton-command input {
+    background-color: #E0B9B4;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    width: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
+.conteneur-bouton-command input:hover {
+    background-color: #C02E44;
+}
+
+.cf7-two-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Aligne les colonnes sur les bords des éléments flexibles */
+}
+
+.cf7-column {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.cf7-column:first-child {
+    border-right: 1px solid #ccc; /* Ajoute une bordure à droite de la première colonne */
+    padding-right: 15px; /* Ajoute un espace à droite pour la bordure */
+}
+
+.cf7-column:last-child {
+    padding-left: 15px; /* Ajoute un espace à gauche pour correspondre à la bordure de la première colonne */
+}
+
+/* Footer */
+footer {
+    border-top: solid white 1px;
+}
+
+footer .footer {
+    display: flex;
+    justify-content: center; /* Centrez le contenu horizontalement */
+    align-items: center; /* Centrez le contenu verticalement */
+}
+
+
+.copy {
+    text-align: center; /* Centrer le texte horizontalement */
+    /* Autres styles pour le contenu de la classe "copy" */
+}
+
+
+
+.site-primary-footer-wrap {
+	border-top: solid white;
+}
+
+.entry-title {
+    display: none;
+}
+
+/* --------------------------------------------------------------- */
+
+
+/*  **********************************  */
+/*    Media query : max-width: 976px    */
+/*  **********************************  */
+@media only screen and (max-width: 976px) {
+
+    /* Page Nous Rencontrer */
+
+   /*        Positions relatives des images       */
+  /* On déplace l'image pour la version portable */
+  .picture1-contact {
+    top: -15px;
+    left: 20px;
+  }
+
+    
+    /* Page Commander */
+
+    #fluentform_6 .ff_columns_total_4 {
+        flex-wrap: wrap;
+          gap: 175px 10px;
+          margin-top: -265px;
+      }
+      
+       #fluentform_6 .ff-t-cell:last-of-type {
+        flex-grow: 0;
+       }
+       
+       #fluentform_6 .ff_columns_total_4 .ff-t-column-1,
+       #fluentform_6 .ff_columns_total_4 .ff-t-column-2,
+       #fluentform_6 .ff_columns_total_4 .ff-t-column-3,
+       #fluentform_6 .ff_columns_total_4 .ff-t-column-4 {
+           flex-basis: 45% !important;
+       }
+       
+   
+       #fluentform_6 .btn-quantity {
+           left: 65px;
+      }	
+    
+      #fluentform_6 .ff_columns_total_2 {
+        flex-direction: column;
+        gap: 0px;
+        padding-left: 50px;
+      }
+      
+      #fluentform_6 .ff_columns_total_2 .ff-t-column-1 {
+        border-right: 0;
+      }
+      
+      #fluentform_6 .ff_columns_total_2 .ff-t-column-2 {
+        padding-left: 0;
+        padding-top: 30px;
+      }
+    
+   }   
+
+
+/*  **********************************  */
+/*    Media query : max-width: 920px    */
+/*  **********************************  */
+@media only screen and (max-width: 920px) {	
+    /* ------------------ */
+    /*                    */
+    /*   page COMMANDE    */
+    /*                    */
+    /* ------------------ */  
+       
+  #fluentform_6 .ff_columns_total_4 {
+    flex-wrap: wrap;
+    gap: 165px 0px;
+    margin-top: -260px;
+  }
+  
+}
+
+/*  **********************************  */
+/*    Media query : max-width: 767px    */
+/*  **********************************  */
+@media only screen and (max-width: 767px) {
+.wp-block-uagb-image figure img {
+  width: 80% !important;
+  object-fit: contain;
+}
+  
+    /* ------------------ */
+    /*                    */
+    /*   page COMMANDE    */
+    /*                    */
+    /* ------------------ */  
+       
+  #fluentform_6 .ff_columns_total_4 {
+    gap: 145px 0px;
+    margin-top: -705px;
+  }
+  
+  #fluentform_6 .btn-quantity {
+      left: 51px;
+  }
+  
+  #fluentform_6 .btn-less {
+      bottom: 20px;
+  }
+  
+  #fluentform_6 .ff_columns_total_2 {
+    flex-direction: column;
+    gap: 0px;
+    padding-left: 0;
+  }
+    
+  #fluentform_6 .ff_columns_total_2 input[type='text'],
+  #fluentform_6 .ff_columns_total_2 input[type='email'] {
+    height: 60px;
+  }
+
+  #fluentform_6 .ff_columns_total_2 .input-order {
+    width:250px;
+  }
+}
+
+/*  **********************************  */
+/*    Media query : max-width: 545px    */
+/*  **********************************  */
+@media only screen and (max-width: 545px) {
+
+
+.wp-block-uagb-image figure img {
+  width: 20% !important;
+}
+  
+    /* ------------------ */
+    /*                    */
+    /*   page COMMANDE    */
+    /*                    */
+    /* ------------------ */  
+       
+  #fluentform_6 .ff_columns_total_4 {
+    gap: 165px 0px;
+    margin-top: -755px;
+  }
+}
+.image-ronde img{
+    border-radius : 100px ;
+}
+
