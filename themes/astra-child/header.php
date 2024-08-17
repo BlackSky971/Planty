@@ -26,6 +26,7 @@ $skip_link_url = apply_filters('hello_elementor_skip_link_url', '#content');
 	<meta name="viewport" content="<?php echo esc_attr($viewport_content); ?>">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
+    </div>
 </head>
 
 <body <?php body_class(); ?>>
@@ -38,6 +39,12 @@ $skip_link_url = apply_filters('hello_elementor_skip_link_url', '#content');
 			</a>
 
 		</div>
+		<!-- Bouton burger pour mobile -->
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
 		<div class="item-menu">
 			<div class="item1">

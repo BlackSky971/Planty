@@ -22,6 +22,16 @@ if (!defined('ABSPATH')) {
 		<a href="">Mentions légales</a>
 	</div>
 </footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var burger = document.querySelector('.burger-menu');
+    var menu = document.querySelector('.item-menu');
+
+    burger.addEventListener('click', function() {
+        menu.classList.toggle('active'); // Ajoute ou retire la classe 'active' pour afficher/masquer le menu
+    });
+});
+</script>
 
 </body>
 
