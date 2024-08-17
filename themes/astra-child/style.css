@@ -12,6 +12,122 @@ Updated: 2024-05-29 18:35:40
 */
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:#ffffff;
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: black;
+  font-family: var(--font-syne);
+}
+
+.logo {
+  display: flex;
+}
+
+.logo-icon {
+  left: 37px;
+  width: 350px;
+  height: 48px;
+  padding-left: 31px;
+}
+
+.energy-drink {
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-baskerville);
+  color: #326238;
+}
+
+.item-menu {
+  display: flex;
+  color: black;
+  align-items: center;
+  gap: 75px;
+
+  
+}
+.menu-item a {
+  color:black;
+  margin-right: 5px;
+}
+
+.item1 ul {
+  list-style: none; /* Supprime les puces des éléments de liste */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Utilisation de flexbox pour aligner les éléments en ligne */
+}
+.btn-nav a {
+  display: flex;
+  padding-right: 61px;
+  padding-left: 61px;
+  align-items: center;
+  height: 80px;
+  background-color: #dc9f96;
+  font-family: var(--font-syne);
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.btn-nav:hover a {
+  background-color: #c02e44;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: var(--font-syne);
+  background-color: #ffffff;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+
+
+.cf7-title {
+    font-family: 'Syne', sans-serif; /* Applique la police Syne */
+    color: #000000; /* Applique la couleur noire */
+    font-size: 24px; /* Taille de la police, ajustable selon vos besoins */
+    text-align: center; /* Centre le texte (optionnel) */
+    margin-bottom: 20px; /* Espace sous le titre */
+}
+
+
+.form-information {
+  border-right: 1px solid;
+}
+
+
 body {
   font-family: 'Syne';
 }
@@ -103,26 +219,4 @@ color:#E0B9B4
 }
 .quantity-container{
 background-color:#E0B9B4;
-}
-/* Responsive */
-@media (max-width: 1024px) {
-  .logo-icon {
-    padding-left: 0px;
-  }
-  #menu-header-menu {
-    gap: 150px;
-  }
-  .logo {
-    align-items: center;
-    height: 100px;
-  }
-  .item-menu {
-    justify-content: space-evenly;
-    width: 100%;
-  }
-  .nav-bar {
-    flex-direction: column;
-    gap: 0px;
-    height: auto;
-  }
 }

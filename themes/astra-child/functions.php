@@ -38,7 +38,7 @@ function add_admin_menu_link($items, $args) {
 // Optional: Add a custom menu location
 add_action('init', 'register_custom_menu_location');
 function register_custom_menu_location() {
-    register_nav_menu('primary', __('Primary Menu'));
+    register_nav_menu('menu', __('Primary Menu'));
 }
 // responsive menu
 function set_container_class($args)
